@@ -14,5 +14,9 @@ sed -i  "s/Port \([0-9]\{2,\}\)/Port ${sshPort}/" /etc/ssh/sshd_config
 # change vim setting
 echo "set ts=2 sw=2"> /etc/vim/vimrc 1> /dev/null
 
+# do not record command history
+rm -f ~/.bash_history`
+ln -s /dev/null ~/.bash_history`
+
 
 echo"setting finished"
